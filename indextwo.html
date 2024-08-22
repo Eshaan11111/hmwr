@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+    background-image: url("https://media.istockphoto.com/id/1130535781/vector/hands-driving-car-auto-inside-dashboard-driver-speed-road-overtaking-street-traffic-travel.jpg?s=612x612&w=0&k=20&c=wW2Jt9cqSj86j0MYeR6q6rEKKiQFUNwtHyhDamr7jFw=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position: left;
+    text-align: center;
+}
+h3{
+    color: green;
+}
+label{
+    color: green;
+}
+button{
+    color: green;
+}
+#result{
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <h3>Driving Allowance</h3>
+    <b><label for="age">Enter your age:</label></b>
+    <br>
+    <input type="number" id="age"> 
+    <br>
+    <button onclick="demo()">Check Allowance</button>
+    <b><p id="result"></p></b>
+    <script>
+        function demo(){
+            let a = document.getElementById("age").value;
+            if(a>=16){
+                document.getElementById("result").innerHTML="You are legally old enough to drive," + "<br>" + "but be alert of your surroundings.";
+            }
+            else{
+                document.getElementById("result").innerHTML="You are not old enough to drive." + "<br>" + "You have to be" + " " + (16 - a) + " " + "years older to legally drive.";
+            }
+            }
+    </script>
+</body>
+</html>
